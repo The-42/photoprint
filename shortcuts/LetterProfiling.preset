@@ -1,0 +1,30 @@
+[Shortcut]
+#_("Profiling Defaults - Letter")
+DisplayName=Profiling Defaults - Letter
+#_("Disables borderless mode, sets Colour Correction to 'Uncorrected', disabled existing printer profile and set single layout with zero margins."
+ToolTip="Disables borderless mode, sets Colour Correction to 'Uncorrected', disabled existing printer profile and set single layout with zero margins."
+
+[Layout_Single]
+LeftMargin=0
+RightMargin=0
+TopMargin=0
+BottomMargin=0
+
+[Layout]
+LayoutType=Single
+AllowCropping=0
+Rotation=0
+
+[Print]
+PageSize=Letter
+FullBleed=0
+ColorCorrection=Uncorrected
+InputImageType=RGB
+
+[ColourManagement]
+PrinterProfileActive=0
+
+[General]
+PresetVersion=41
+PrintColourSpace=RGB
+

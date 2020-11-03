@@ -1,0 +1,27 @@
+[Shortcut]
+#_("A4 - 8x6, 1-up")
+DisplayName=A4 - 8x6, 1-up
+
+[Layout_NUp]
+Rows=1
+Columns=1
+HGutter=0
+VGutter=36
+LeftMargin=14
+RightMargin=14
+TopMargin=36
+BottomMargin=36
+CellWidth=576
+CellHeight=432
+AbsoluteMode=1
+
+[Layout]
+LayoutType=NUp
+
+[Print]
+PageSize=A4
+FullBleed=1
+
+[General]
+PresetVersion=41
+

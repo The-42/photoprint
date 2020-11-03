@@ -1,0 +1,27 @@
+[Shortcut]
+#_("Letter - 7x5, 2-up")
+DisplayName=Letter - 7x5, 2-up
+
+[Layout_NUp]
+Rows=2
+Columns=1
+HGutter=0
+VGutter=36
+LeftMargin=36
+RightMargin=36
+TopMargin=18
+BottomMargin=18
+CellWidth=504
+CellHeight=360
+AbsoluteMode=1
+
+[Layout]
+LayoutType=NUp
+
+[Print]
+PageSize=Letter
+FullBleed=0
+
+[General]
+PresetVersion=41
+

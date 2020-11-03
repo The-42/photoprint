@@ -1,0 +1,27 @@
+[Shortcut]
+#_("A4 - 7x5, 2-up")
+DisplayName=A4 - 7x5, 2-up
+
+[Layout_NUp]
+Rows=2
+Columns=1
+HGutter=0
+VGutter=36
+LeftMargin=45
+RightMargin=45
+TopMargin=43
+BottomMargin=43
+CellWidth=504
+CellHeight=360
+AbsoluteMode=1
+
+[Layout]
+LayoutType=NUp
+
+[Print]
+PageSize=A4
+FullBleed=0
+
+[General]
+PresetVersion=41
+

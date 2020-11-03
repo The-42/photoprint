@@ -1,0 +1,27 @@
+[Shortcut]
+#_("Letter - 10x8, 1-up")
+DisplayName=Letter - 10x8, 1-up
+
+[Layout_NUp]
+Rows=1
+Columns=1
+HGutter=0
+VGutter=36
+LeftMargin=18
+RightMargin=18
+TopMargin=18
+BottomMargin=36
+CellWidth=576
+CellHeight=720
+AbsoluteMode=1
+
+[Layout]
+LayoutType=NUp
+
+[Print]
+PageSize=Letter
+FullBleed=0
+
+[General]
+PresetVersion=41
+
