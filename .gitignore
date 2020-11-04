@@ -1,0 +1,26 @@
+# Automake directories
+/autom4te.cache/
+/m4/
+/scripts/
+
+# Automake files
+/aclocal.m4
+/config.h.in
+/configure
+Makefile.in
+Makefile
+stamp-*
+
+# Translations
+ABOUT-NLS
+/po/*.gmo
+/po/*.header
+/po/*.sed
+/po/*.sin
+/po/*.template
+/po/ChangeLog
+/po/Makefile.in.in
+/po/Rules-*
+
+# Generic
+*~
