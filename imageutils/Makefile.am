@@ -1,4 +1,4 @@
-AM_CXXFLAGS = -Wall -I../imagesource/ -I../pixbufthumbnail -I../profilemanager -I../support $(LCMS_CFLAGS) $(GTK2_CFLAGS) ${PNM_CFLAGS}
+AM_CXXFLAGS = -Wall -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/pixbufthumbnail -I$(top_srcdir)/profilemanager -I$(top_srcdir)/support $(LCMS_CFLAGS) $(GTK2_CFLAGS) ${PNM_CFLAGS}
 
 noinst_LTLIBRARIES = libimageutils.la
 

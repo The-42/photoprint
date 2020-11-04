@@ -6,7 +6,7 @@ SUBDIRS = po support imagesource imageutils miscwidgets stpui_widgets stp_suppor
 
 localedir=$(datadir)/locale
 
-AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I./support/ -I./miscwidgets -I./imagesource/ -I./splashscreen -I./profilemanager -I./effects \
+AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/support/ -I$(top_srcdir)/miscwidgets -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/splashscreen -I$(top_srcdir)/profilemanager -I$(top_srcdir)/effects \
 	$(LCMS_CFLAGS) $(GP_CFLAGS) $(GTK2_CFLAGS)
 
 bin_PROGRAMS = photoprint

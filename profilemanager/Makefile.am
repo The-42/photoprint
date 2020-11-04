@@ -1,7 +1,7 @@
 
 localedir=$(datadir)/locale
 
-AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I../imagesource/ -I../support/ $(LCMS_CFLAGS) $(GTK2_CFLAGS)
+AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/support/ $(LCMS_CFLAGS) $(GTK2_CFLAGS)
 
 noinst_LTLIBRARIES = libprofilemanager.la
 
