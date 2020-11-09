@@ -11,7 +11,7 @@
 #endif
 
 #ifdef HAVE_LIBCUPS
-#include <cups/cups.h>
+#include <cups/ppd.h>
 #endif
 
 struct PrintSystem
