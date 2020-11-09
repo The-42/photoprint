@@ -18,8 +18,6 @@
 #include "imagesource_tiff.h"
 #include <fstream>
 
-using namespace std;
-
 class ImageSource_GS : public ImageSource
 {
 	public:

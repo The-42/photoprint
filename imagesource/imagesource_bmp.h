@@ -15,8 +15,6 @@
 #include "imagesource.h"
 #include <fstream>
 
-using namespace std;
-
 class IS_BMPStrip;
 
 class ImageSource_BMP : public ImageSource
@@ -29,7 +27,7 @@ class ImageSource_BMP : public ImageSource
 	IS_BMPStrip *GetStrip(int row);
 	unsigned long GetValue(char *c,int l);
 	int resunit;
-	fstream file;
+	std::fstream file;
 	int cmapbytes;
 	int cmapentries;
 	int bytesperrow;

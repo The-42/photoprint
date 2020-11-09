@@ -16,8 +16,6 @@
 #include <gdk/gdkpixbuf.h>
 #include <fstream>
 
-using namespace std;
-
 class ImageSource_GdkPixbuf : public ImageSource
 {
 	public:

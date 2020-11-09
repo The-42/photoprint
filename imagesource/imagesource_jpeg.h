@@ -15,8 +15,6 @@
 #include "imagesource.h"
 #include <cstdio>
 
-using namespace std;
-
 class ImageSource_JPEG : public ImageSource
 {
 	public:

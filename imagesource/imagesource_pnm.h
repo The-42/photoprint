@@ -31,8 +31,6 @@ extern "C"
 #endif
 }
 
-using namespace std;
-
 class ImageSource_PNM : public ImageSource
 {
 	public:
