@@ -4,6 +4,8 @@
 SUBDIRS = po support imagesource imageutils miscwidgets stpui_widgets stp_support gp_cppsupport pixbufthumbnail \
 	splashscreen profilemanager effects borders shortcuts
 
+ACLOCAL_AMFLAGS = -I m4
+
 localedir=$(datadir)/locale
 
 AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/support/ -I$(top_srcdir)/miscwidgets -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/splashscreen -I$(top_srcdir)/profilemanager -I$(top_srcdir)/effects \
