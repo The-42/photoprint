@@ -20,7 +20,15 @@ AC_PROG_CPP
 
 # Are we building for Win32?
 case $host_os in
-  *mingw32* ) echo "Configuring for mingw"; LIBS="-lwinspool $LIBS -mwindows" ;;
+	*mingw32* | *msys* |  *-cygwin*)
+		echo "Configuring for mingw, msys or cygwin"
+		LIBS="-lwinspool $LIBS -mwindows"
+		;;
+	*)
+		echo "Assuming Linux"
+		PKG_CHECK_MODULES(X11, [x11])
+		LIBS="$LIBS -lX11"
+		;;
 esac
 
 # Checks for libraries.
