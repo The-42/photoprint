@@ -93,6 +93,13 @@ AC_FUNC_MALLOC
 AC_FUNC_STAT
 AC_CHECK_FUNCS([memset mkdir strcasecmp strdup strncasecmp])
 
+# Build less verbose
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES(yes)])
+if make --help 2>&1 | grep -q no-print-directory; then
+	AM_MAKEFLAGS="$AM_MAKEFLAGS --no-print-directory";
+fi
+AC_SUBST(AM_MAKEFLAGS)
+
 AC_CONFIG_FILES([Makefile po/Makefile.in
                  imagesource/Makefile
                  imageutils/Makefile
