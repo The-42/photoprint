@@ -113,7 +113,7 @@ PPEffect *PPEffectHeader::Find(const char *id)
 		{
 			
 			result=tmp;
-			tmp=false;
+			tmp=NULL;
 		}
 		else
 			tmp=tmp->Next(PPEFFECT_DONTCARE);
