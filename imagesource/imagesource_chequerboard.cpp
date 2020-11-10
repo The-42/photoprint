@@ -52,7 +52,8 @@ ImageSource_Chequerboard::ImageSource_Chequerboard(int width,int height,IS_TYPE 
 	MakeRowBuffer();
 }
 
-ImageSource_Chequerboard::~ImageSource_Chequerboard()
+
+ImageSource_Chequerboard::~ImageSource_Chequerboard()
 {
 }
 

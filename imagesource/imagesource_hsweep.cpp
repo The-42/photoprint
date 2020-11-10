@@ -17,7 +17,8 @@ ISDataType *ImageSource_HSweep::GetRow(int row)
 {
 	if(currentrow==row)
 		return(rowbuffer);
-	for(int x=0;x<width;++x)
+
+	for(int x=0;x<width;++x)
 	{
 		for(int s=0;s<samplesperpixel;++s)
 		{
@@ -42,7 +43,8 @@ ImageSource_HSweep::ImageSource_HSweep(int width,int height,ISDeviceNValue &left
 	MakeRowBuffer();
 }
 
-ImageSource_HSweep::~ImageSource_HSweep()
+
+ImageSource_HSweep::~ImageSource_HSweep()
 {
 }
 

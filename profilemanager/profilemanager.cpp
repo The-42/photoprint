@@ -484,7 +484,8 @@ CMSTransform *CMTransformFactory::GetTransform(CMSProfile *destprofile,CMSProfil
 	return(transform);
 }
 
-CMSTransform *CMTransformFactory::GetTransform(CMSProfile *destprofile,CMSProfile *srcprofile,CMSProfile *proofprofile,LCMSWrapper_Intent intent,int displayintent)
+
+CMSTransform *CMTransformFactory::GetTransform(CMSProfile *destprofile,CMSProfile *srcprofile,CMSProfile *proofprofile,LCMSWrapper_Intent intent,int displayintent)
 {
 //	Debug[TRACE] << "Getting proofing transform - Using intent: " << intent << endl;
 

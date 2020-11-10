@@ -31,7 +31,8 @@
 
 #include "../support/debug.h"
 
-#include "imagesource_tiff.h"#include "../profilemanager/lcmswrapper.h"
+#include "imagesource_tiff.h"
+#include "../profilemanager/lcmswrapper.h"
 
 using namespace std;
 
@@ -276,7 +277,8 @@ int ImageSource_TIFF::CountTIFFDirs(const char *filename,int &largestdir)
 		++count;	
 		uint32 width,height;
 		TIFFGetField(file, TIFFTAG_IMAGEWIDTH, &width);
-		TIFFGetField(file, TIFFTAG_IMAGELENGTH, &height);		Debug[TRACE] << "Got image with dimensions " << width << " x " << height << endl;
+		TIFFGetField(file, TIFFTAG_IMAGELENGTH, &height);
+		Debug[TRACE] << "Got image with dimensions " << width << " x " << height << endl;
 		if((width*height)>largestarea)
 		{
 			largestarea=width*height;
@@ -290,7 +292,7 @@ int ImageSource_TIFF::CountTIFFDirs(const char *filename,int &largestdir)
 	Debug[TRACE] << "A total of " << count << "sub-images, the largest being " << largestdir << endl;
 
 	return(count);
-}
+}
 
 ImageSource_TIFF::ImageSource_TIFF(const char *filename) : ImageSource()
 {

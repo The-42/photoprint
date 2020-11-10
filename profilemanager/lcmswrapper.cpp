@@ -693,7 +693,8 @@ CMSProofingTransform::CMSProofingTransform(CMSProfile *in,CMSProfile *out,CMSPro
 		ot,
 		proof->prof,
 		CMS_GetLCMSIntent(proofintent),
-		CMS_GetLCMSIntent(viewintent), CMS_GetLCMSFlags(proofintent)|cmsFLAGS_SOFTPROOFING);}
+		CMS_GetLCMSIntent(viewintent), CMS_GetLCMSFlags(proofintent)|cmsFLAGS_SOFTPROOFING);
+}
 
 
 CMSProofingTransform::CMSProofingTransform(CMSProfile *devicelink,CMSProfile *proof,int proofintent,int viewintent)
@@ -756,4 +757,5 @@ CMSProofingTransform::CMSProofingTransform(CMSProfile *devicelink,CMSProfile *pr
 		ot,
 		proof->prof,
 		CMS_GetLCMSIntent(proofintent),
-		CMS_GetLCMSIntent(viewintent), CMS_GetLCMSFlags(proofintent)|cmsFLAGS_SOFTPROOFING);}
+		CMS_GetLCMSIntent(viewintent), CMS_GetLCMSFlags(proofintent)|cmsFLAGS_SOFTPROOFING);
+}

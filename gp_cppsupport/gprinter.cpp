@@ -693,7 +693,8 @@ class ImageSource_RainbowSweep : public ImageSource
 		randomaccess=true;
 		MakeRowBuffer();
 	}
-	~ImageSource_RainbowSweep()
+
+	~ImageSource_RainbowSweep()
 	{
 	}
 
@@ -701,7 +702,8 @@ class ImageSource_RainbowSweep : public ImageSource
 	{
 		if(currentrow==row)
 			return(rowbuffer);
-		double a=row;
+
+		double a=row;
 		a/=height;
 
 		for(int x=0;x<width;++x)

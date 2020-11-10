@@ -62,7 +62,8 @@ ImageSource_HTicks::ImageSource_HTicks(int width,int height,IS_TYPE type,int sam
 	MakeRowBuffer();
 }
 
-ImageSource_HTicks::~ImageSource_HTicks()
+
+ImageSource_HTicks::~ImageSource_HTicks()
 {
 }
 
