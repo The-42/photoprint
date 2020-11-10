@@ -4,6 +4,7 @@
 AC_PREREQ(2.59)
 AC_INIT([photoprint], [0.4.2-pre2], [blackfive@fakenhamweb.co.uk])
 AC_CONFIG_AUX_DIR([scripts])
+AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_SRCDIR([photoprint.cpp])
 AM_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE([1.9 foreign])
