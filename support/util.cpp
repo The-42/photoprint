@@ -395,7 +395,7 @@ std::string ShellQuote(std::string &in)
 {
 	string out("'");
 
-	for(int i=0;i<in.size();++i)
+	for(unsigned i=0;i<in.size();++i)
 	{
 		if(in[i]=='\'')
 			out+="'\\''";
