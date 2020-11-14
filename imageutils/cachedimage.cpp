@@ -33,7 +33,7 @@ CachedImage_Deferred::~CachedImage_Deferred()
 {
 	if(imagedata)
 		delete[] imagedata;
-	if(source);
+	if(source)
 		delete source;
 	if(embeddedprofile)
 		delete embeddedprofile;
