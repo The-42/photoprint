@@ -111,7 +111,7 @@ static void clear_list(ImageSelector *il)
 		ImageEntry *ii=(ImageEntry *)iter->data;
 		if(ii->pixbuf)
 			g_object_unref(G_OBJECT(ii->pixbuf));
-		if(ii->filename);
+		if(ii->filename)
 			free(ii->filename);
 		GList *niter=g_list_next(iter);
 		il->imagelist=g_list_delete_link(il->imagelist,iter);
