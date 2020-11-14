@@ -86,10 +86,7 @@ ISDataType *ImageSource_PNM::GetRow(int row)
 
 ImageSource_PNM::ImageSource_PNM(const char *filename)
 {
-	char *argv[]={"PNMLoader",0};
-	int argc=1;
-
-	pnm_init(&argc,argv);
+	pm_init("PNMLoader", 0);
 
 	if(!(file=fopen(filename,"rb")))
 		throw "Can't open file";
