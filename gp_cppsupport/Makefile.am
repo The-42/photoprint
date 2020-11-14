@@ -1,5 +1,5 @@
 AM_CFLAGS = -Wall
-AM_CXXFLAGS = -Wall -I$(top_srcdir) $(GP_CFLAGS) $(GTK2_CFLAGS)
+AM_CXXFLAGS = -Wall -I$(top_srcdir) $(GP_CFLAGS) $(GTK2_CFLAGS) -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_30
 
 noinst_LTLIBRARIES = libgp_cppsupport.la
 

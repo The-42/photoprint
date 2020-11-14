@@ -2,7 +2,7 @@ CLEANFILES = ppeffect_desaturate_icon.cpp ppeffect_temperature_icon.cpp
 
 localedir=$(datadir)/locale
 
-AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/ -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/pixbufthumbnail -I$(top_srcdir)/support/ -I$(top_srcdir)/profilemanager $(LCMS_CFLAGS) $(GTK2_CFLAGS)
+AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/ -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/pixbufthumbnail -I$(top_srcdir)/support/ -I$(top_srcdir)/profilemanager $(LCMS_CFLAGS) $(GTK2_CFLAGS) -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_30
 
 noinst_LTLIBRARIES = libppeffects.la
 

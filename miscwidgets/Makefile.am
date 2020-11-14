@@ -1,4 +1,4 @@
-AM_CXXFLAGS = -Wall -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/pixbufthumbnail -I$(top_srcdir)/profilemanager -I$(top_srcdir)/support -I$(top_srcdir) $(LCMS_CFLAGS) $(GTK2_CFLAGS) ${PNM_CFLAGS}
+AM_CXXFLAGS = -Wall -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/pixbufthumbnail -I$(top_srcdir)/profilemanager -I$(top_srcdir)/support -I$(top_srcdir) $(LCMS_CFLAGS) $(GTK2_CFLAGS) ${PNM_CFLAGS} -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_30
 
 noinst_LTLIBRARIES = libmiscwidgets.la
 
