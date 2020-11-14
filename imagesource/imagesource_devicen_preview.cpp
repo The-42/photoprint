@@ -37,7 +37,7 @@ ISDeviceN_Colorant_Preview::ISDeviceN_Colorant_Preview(const char *longname,int 
 
 
 ISDeviceN_Colorant_Preview::ISDeviceN_Colorant_Preview(const char *longname)
-	: red(EIGHTTOIS(red)),green(EIGHTTOIS(green)),blue(EIGHTTOIS(blue)),longname(NULL),alias(alias)
+	: red(EIGHTTOIS(red)),green(EIGHTTOIS(green)),blue(EIGHTTOIS(blue)),longname(NULL),alias(0)
 {
 	if(StrcasecmpIgnoreSpaces(longname,"Cyan")==0)
 	{
