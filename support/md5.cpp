@@ -175,7 +175,7 @@ void MD5Context::UpdateMD5Context(unsigned char const *inbuf, unsigned len)
     /* Update bitcount */
 
     t = bits[0];
-    if ((bits[0] = t + ((unsigned int)len << 3)) < t)
+    if ((bits[0] = t + ((unsigned int)len << 3)) < (int)t)
 	bits[1]++;		/* Carry from low to high */
     bits[1] += len >> 29;
 
