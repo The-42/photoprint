@@ -1460,7 +1460,7 @@ egg_pixbuf_set_thumbnail_size (GdkPixbuf             *thumbnail,
  * 
  * Since: 2.6
  **/
-G_CONST_RETURN gchar *
+const gchar *
 egg_pixbuf_get_thumbnail_uri (GdkPixbuf *thumbnail)
 {
   ThumbnailData *data;
@@ -1506,7 +1506,7 @@ egg_pixbuf_set_thumbnail_uri (GdkPixbuf   *thumbnail,
  * 
  * Since: 2.6
  **/
-G_CONST_RETURN gchar *
+const gchar *
 egg_pixbuf_get_thumbnail_mime_type (GdkPixbuf *thumbnail)
 {
   ThumbnailData *data;
@@ -1554,7 +1554,7 @@ egg_pixbuf_set_thumbnail_mime_type (GdkPixbuf   *thumbnail,
  * 
  * Since: 2.6
  **/
-G_CONST_RETURN gchar *
+const gchar *
 egg_pixbuf_get_thumbnail_description (GdkPixbuf *thumbnail)
 {
   ThumbnailData *data;
@@ -1878,7 +1878,7 @@ egg_pixbuf_set_thumbnail_movie_length (GdkPixbuf *thumbnail,
  * 
  * Since: 2.6
  **/
-G_CONST_RETURN gchar *
+const gchar *
 egg_pixbuf_get_thumbnail_software (GdkPixbuf *thumbnail)
 {
   ThumbnailData *data;

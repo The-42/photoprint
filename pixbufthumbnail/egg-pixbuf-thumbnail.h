@@ -79,13 +79,13 @@ EggPixbufThumbnailSize egg_pixbuf_get_thumbnail_size             (GdkPixbuf     
 void                   egg_pixbuf_set_thumbnail_size             (GdkPixbuf             *thumbnail,
 								  EggPixbufThumbnailSize size);
 
-G_CONST_RETURN gchar  *egg_pixbuf_get_thumbnail_uri              (GdkPixbuf             *thumbnail);
+const gchar           *egg_pixbuf_get_thumbnail_uri              (GdkPixbuf             *thumbnail);
 void                   egg_pixbuf_set_thumbnail_uri              (GdkPixbuf             *thumbnail,
 								  const gchar           *uri);
-G_CONST_RETURN gchar  *egg_pixbuf_get_thumbnail_mime_type        (GdkPixbuf             *thumbnail);
+const gchar           *egg_pixbuf_get_thumbnail_mime_type        (GdkPixbuf             *thumbnail);
 void                   egg_pixbuf_set_thumbnail_mime_type        (GdkPixbuf             *thumbnail,
 								  const gchar           *mime_type);
-G_CONST_RETURN gchar  *egg_pixbuf_get_thumbnail_description      (GdkPixbuf             *thumbnail);
+const gchar           *egg_pixbuf_get_thumbnail_description      (GdkPixbuf             *thumbnail);
 void                   egg_pixbuf_set_thumbnail_description      (GdkPixbuf             *thumbnail,
 								  const gchar           *description);
 time_t		       egg_pixbuf_get_thumbnail_mtime            (GdkPixbuf             *thumbnail);
@@ -107,7 +107,7 @@ time_t		       egg_pixbuf_get_thumbnail_movie_length     (GdkPixbuf             
 void                   egg_pixbuf_set_thumbnail_movie_length     (GdkPixbuf             *thumbnail,
 								  time_t                 movie_length);
 
-G_CONST_RETURN gchar  *egg_pixbuf_get_thumbnail_software         (GdkPixbuf             *thumbnail);
+const gchar           *egg_pixbuf_get_thumbnail_software         (GdkPixbuf             *thumbnail);
 
 gchar                 *egg_pixbuf_get_thumbnail_filename         (const gchar           *uri,
 								  EggPixbufThumbnailSize size);
