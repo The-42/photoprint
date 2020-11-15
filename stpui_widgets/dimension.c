@@ -189,14 +189,14 @@ void sanitycheck()
 	int i;
 	double r;
 
-	for(i=0;i<(sizeof(mmtest)/sizeof(float));++i)
+	for(i=0;i<(sizeof(mmtest)/sizeof(double));++i)
 	{
 		r=UNIT_MILLIMETERS_TO_POINTS(mmtest[i]);
 		printf("%lfmm -> %lfpt ",mmtest[i],r);
 		printf("(%lfmm)\n",ROUNDTONEAREST(r,POINTS_PRECISION));
 	}
 	printf("\n");
-	for(i=0;i<(sizeof(intest)/sizeof(float));++i)
+	for(i=0;i<(sizeof(intest)/sizeof(double));++i)
 	{
 		r=UNIT_INCHES_TO_POINTS(intest[i]);
 		printf("%lfin -> %lfpt ",intest[i],r);
