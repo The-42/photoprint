@@ -381,9 +381,9 @@ static void imageselector_other(GtkTreeSelection *select,gpointer user_data)
 
 #define TARGET_URI_LIST 1
 
-
+static const gchar *text_uri_list = "text/uri-list";
 static GtkTargetEntry dnd_file_drop_types[] = {
-	{ "text/uri-list", 0, TARGET_URI_LIST }
+	{ (char *)text_uri_list, 0, TARGET_URI_LIST }
 };
 static gint dnd_file_drop_types_count = 1;
 
