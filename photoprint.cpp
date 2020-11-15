@@ -68,7 +68,7 @@ bool ParseOptions(int argc,char *argv[],char **presetname)
 				printf("\t -v --version\t\tdisplay version\n");
 				printf("\t -p --preset\t\tread a specific preset file\n");
 				printf("\t -b --batch\t\trun without user interface\n");
-				printf("\t -d --debug\t\tset debugging level - 0 for silent, 4 for verbose");
+				printf("\t -d --debug\t\tset debugging level - 0 for silent, 4 for verbose\n");
 				throw 0;
 				break;
 			case 'v':
