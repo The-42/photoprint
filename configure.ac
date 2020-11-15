@@ -7,10 +7,12 @@ AC_CONFIG_AUX_DIR([scripts])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_SRCDIR([photoprint.cpp])
 AC_CONFIG_HEADERS([config.h])
-AM_INIT_AUTOMAKE([1.9 foreign])
+AM_INIT_AUTOMAKE([1.9 foreign -Wall])
 
 AM_GNU_GETTEXT_VERSION([0.20])
 AM_GNU_GETTEXT([external])
+
+AM_PROG_AR
 
 # Checks for programs.
 LT_INIT
