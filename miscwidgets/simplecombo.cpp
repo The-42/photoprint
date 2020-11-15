@@ -152,11 +152,7 @@ simplecombo_get_type (void)
 static void
 simplecombo_class_init (SimpleComboClass *cl)
 {
-	GtkObjectClass *object_class;
-	GtkWidgetClass *widget_class;
-	
-	object_class = (GtkObjectClass*) cl;
-	widget_class = (GtkWidgetClass*) cl;
+	GtkObjectClass *object_class = (GtkObjectClass*) cl;
 	
 	object_class->destroy = simplecombo_destroy;	
 

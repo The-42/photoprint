@@ -164,7 +164,6 @@ class BuildHistogramThread : public ThreadFunction
 #endif
 			--count;
 		}
-		ISDataType *junk;
 		ImageSource *is=ii->GetImageSource();
 
 		Debug[TRACE] << "BuildHistogramThread: Succeeded in obtaining ImageInfo mutex" << endl;
@@ -181,7 +180,7 @@ class BuildHistogramThread : public ThreadFunction
 
 			for(int y=0;y<is->height;++y)
 			{
-				junk=is->GetRow(y);
+				is->GetRow(y);
 			}
 		}
 

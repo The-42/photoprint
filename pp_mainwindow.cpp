@@ -57,7 +57,6 @@ static void layout_selection_changed(GtkWidget *wid,gpointer *ob)
 
 	PP_ROTATION rotation=ImageMenu_GetRotation(mw->uim);
 	bool allowcropping=ImageMenu_GetCropFlag(mw->uim);
-	bool removeimage=true;
 
 	LayoutIterator it(*mw->state->layout);
 	Layout_ImageInfo *ii=it.FirstSelected();
@@ -66,8 +65,6 @@ static void layout_selection_changed(GtkWidget *wid,gpointer *ob)
 		allowcropping=ii->allowcropping;
 		rotation=ii->rotation;
 	}
-	else
-		removeimage=false;
 
 	while(ii)
 	{

@@ -210,7 +210,6 @@ item_toggled (GtkCellRendererToggle *cell,gchar *path_str,gpointer data)
 
 static void setup_renderers(EffectSelector *sel)
 {
-	gint col_offset;
 	GtkCellRenderer *renderer;
 
 	// Active column
@@ -218,7 +217,7 @@ static void setup_renderers(EffectSelector *sel)
 
 	g_signal_connect (renderer, "toggled", G_CALLBACK (item_toggled), sel);
 
-	col_offset = gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (sel->treeview),
+	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (sel->treeview),
 		-1, _("Active"),
 		renderer,
 		"active",
@@ -227,7 +226,7 @@ static void setup_renderers(EffectSelector *sel)
 
 	// Pixbuf column
 	renderer=gtk_cell_renderer_pixbuf_new();
-	col_offset=gtk_tree_view_insert_column_with_attributes(GTK_TREE_VIEW (sel->treeview),
+	gtk_tree_view_insert_column_with_attributes(GTK_TREE_VIEW (sel->treeview),
 		-1,_("Icon"),
 		renderer,
 		"pixbuf",
@@ -239,7 +238,7 @@ static void setup_renderers(EffectSelector *sel)
 	g_object_set (renderer, "xalign", 0.0, NULL);
 	g_object_set (renderer, "xpad", 10, NULL);
 	
-	col_offset = gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (sel->treeview),
+	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (sel->treeview),
 	    -1, _("Name"),
 	    renderer, "text",
 	    LABEL_COLUMN,

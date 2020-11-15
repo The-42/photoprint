@@ -402,8 +402,6 @@ static void get_dnd_data(GtkWidget *widget, GdkDragContext *context,
 			g_print("Warning: only local files (file://) are currently supported\n");
 			while(*urilist && *urilist!='\n' && *urilist!='\r')
 				++urilist;
-			while(*urilist=='\n' || *urilist=='\r')
-				*urilist++;
 		}
 		else
 		{

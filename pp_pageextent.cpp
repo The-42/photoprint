@@ -212,7 +212,6 @@ pp_pageextent_new (PageExtent *pe,PhotoPrint_State *state)
 	ob->pe=pe;
 	ob->state=state;
 	
-	GtkWidget *hbox;
 	GtkWidget *label;
 	GtkWidget *vbox;
 
@@ -286,8 +285,6 @@ pp_pageextent_new (PageExtent *pe,PhotoPrint_State *state)
 
 	//    RightMargin spin button
 
-	hbox=gtk_hbox_new(FALSE,0);
-	
 	label=gtk_label_new(_("Right:"));
 	gtk_misc_set_alignment(GTK_MISC(label),1.0,0.5);
 	gtk_table_attach_defaults(GTK_TABLE(table),GTK_WIDGET(label),2,3,2,3);

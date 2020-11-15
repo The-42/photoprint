@@ -68,8 +68,6 @@ static void get_dnd_data(GtkWidget *widget, GdkDragContext *context,
 		{
 			while(*urilist && *urilist!='\n' && *urilist!='\r')
 				++urilist;
-			while(*urilist=='\n' || *urilist=='\r')
-				*urilist++;
 		}
 		else
 		{	
@@ -132,11 +130,7 @@ pp_layout_single_pageview_get_type ()
 static void
 pp_layout_single_pageview_class_init (pp_Layout_Single_PageViewClass *cl)
 {
-	GtkObjectClass *object_class;
-	GtkWidgetClass *widget_class;
-	
-	object_class = (GtkObjectClass*) cl;
-	widget_class = (GtkWidgetClass*) cl;
+	GtkWidgetClass *widget_class = (GtkWidgetClass*) cl;
 	
 	parent_class = GTK_WIDGET_CLASS(gtk_type_class (gtk_widget_get_type ()));
 	
@@ -210,7 +204,6 @@ pp_layout_single_pageview_new (Layout_Single *layout)
 static void
 pp_layout_single_pageview_realize (GtkWidget *widget)
 {
-  pp_Layout_Single_PageView *pageview;
   GdkWindowAttr attributes;
   gint attributes_mask;
 
@@ -218,7 +211,6 @@ pp_layout_single_pageview_realize (GtkWidget *widget)
   g_return_if_fail (PP_IS_PAGEVIEW (widget));
 
   GTK_WIDGET_SET_FLAGS (widget, GTK_REALIZED);
-  pageview = PP_LAYOUT_SINGLE_PAGEVIEW (widget);
 
   attributes.x = widget->allocation.x;
   attributes.y = widget->allocation.y;

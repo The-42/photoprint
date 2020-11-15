@@ -112,7 +112,6 @@ GtkWidget *pixbufview_new (GdkPixbuf *pb,bool scaletofit)
 static void
 pixbufview_realize (GtkWidget *widget)
 {
-	PixbufView *pageview;
 	GdkWindowAttr attributes;
 	gint attributes_mask;
 
@@ -120,7 +119,6 @@ pixbufview_realize (GtkWidget *widget)
 	g_return_if_fail (IS_PIXBUFVIEW (widget));
 
 	GTK_WIDGET_SET_FLAGS (widget, GTK_REALIZED);
-	pageview = PIXBUFVIEW (widget);
 
 	attributes.x = widget->allocation.x;
 	attributes.y = widget->allocation.y;
