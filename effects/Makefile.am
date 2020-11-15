@@ -2,7 +2,7 @@ CLEANFILES = ppeffect_desaturate_icon.cpp ppeffect_temperature_icon.cpp
 
 localedir=$(datadir)/locale
 
-AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/ -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/pixbufthumbnail -I$(top_srcdir)/support/ -I$(top_srcdir)/profilemanager $(LCMS_CFLAGS) $(GTK2_CFLAGS) -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_30
+AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/ -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/pixbufthumbnail -I$(top_srcdir)/support/ -I$(top_srcdir)/profilemanager $(LCMS_CFLAGS) $(GTK3_CFLAGS)
 
 noinst_LTLIBRARIES = libppeffects.la
 
@@ -46,7 +46,7 @@ dialogcheck_DEPENDENCIES = libppeffects.la ../pixbufthumbnail/libpixbufthumbnail
 	../imagesource/libimagesource.la ../profilemanager/libprofilemanager.la \
 	../support/libsupport.la
 dialogcheck_LDADD = -L. -lppeffects -L../imagesource -limagesource -L../profilemanager -lprofilemanager \
-	-L../support -lsupport -L../pixbufthumbnail -lpixbufthumbnail  $(LIBINTL) $(TIFF_LIBS) $(LCMS_LIBS) $(GTK2_LIBS)
+	-L../support -lsupport -L../pixbufthumbnail -lpixbufthumbnail  $(LIBINTL) $(TIFF_LIBS) $(LCMS_LIBS) $(GTK3_LIBS)
 
 EXTRA_DIST = TemperatureIcon.bmp DesaturateIcon.bmp UnsharpMaskIcon.bmp \
 		ppeffect_temperature_icon.cpp ppeffect_desaturate_icon.cpp ppeffect_unsharpmask_icon.cpp

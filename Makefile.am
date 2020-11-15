@@ -9,7 +9,7 @@ ACLOCAL_AMFLAGS = -I m4
 localedir=$(datadir)/locale
 
 AM_CXXFLAGS = -DLOCALEDIR=\"$(localedir)\" -Wall -I$(top_srcdir)/support/ -I$(top_srcdir)/miscwidgets -I$(top_srcdir)/imagesource/ -I$(top_srcdir)/splashscreen -I$(top_srcdir)/profilemanager -I$(top_srcdir)/effects \
-	$(LCMS_CFLAGS) $(GP_CFLAGS) $(GTK2_CFLAGS) -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_30
+	$(LCMS_CFLAGS) $(GP_CFLAGS) $(GTK3_CFLAGS)
 
 bin_PROGRAMS = photoprint
 
@@ -99,7 +99,7 @@ LDADD = \
 	stp_support/libstp_support.la \
 	pixbufthumbnail/libpixbufthumbnail.la	\
 	splashscreen/libsplashscreen.la	\
-	$(LIBINTL) $(LIBM_LIBS) $(GETOPT_LIBS) $(JPEG_LIBS) $(PNM_LIBS) $(TIFF_LIBS) $(LCMS_LIBS) $(GP_LIBS) $(GTK2_LIBS)
+	$(LIBINTL) $(LIBM_LIBS) $(GETOPT_LIBS) $(JPEG_LIBS) $(PNM_LIBS) $(TIFF_LIBS) $(LCMS_LIBS) $(GP_LIBS) $(GTK3_LIBS)
 
 check_PROGRAMS = menucheck carouselcheck misccheck
 

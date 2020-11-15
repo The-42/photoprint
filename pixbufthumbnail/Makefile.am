@@ -1,4 +1,4 @@
-AM_CFLAGS = $(GTK2_CFLAGS)
+AM_CFLAGS = $(GTK3_CFLAGS)
 
 noinst_LTLIBRARIES = libpixbufthumbnail.la
 
