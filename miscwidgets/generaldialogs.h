@@ -1,7 +1,7 @@
 #ifndef GENERAL_DIALOGS_H
 #define GENERAL_DIALOGS_H
 
-#include <gtk/gtkwindow.h>
+#include <gtk/gtk.h>
 
 void ErrorMessage_Dialog(const char *message,GtkWidget *parent=NULL);
 bool Query_Dialog(const char *message,GtkWidget *parent);

@@ -1,7 +1,7 @@
 #ifndef PHOTOPRINT_DIALOGS_H
 #define PHOTOPRINT_DIALOGS_H
 
-#include <gtk/gtkwindow.h>
+#include <gtk/gtk.h>
 
 #include "photoprint_state.h"
 

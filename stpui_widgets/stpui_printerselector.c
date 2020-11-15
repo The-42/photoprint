@@ -1,7 +1,6 @@
 #include <string.h>
 
-#include <gtk/gtklist.h>
-#include <gtk/gtkentry.h>
+#include <gtk/gtk.h>
 
 #include "stpui_printerselector.h"
 

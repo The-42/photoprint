@@ -16,11 +16,7 @@
 
 #include <string.h>
 
-#include <gtk/gtkentry.h>
-#include <gtk/gtklist.h>
-#include <gtk/gtkfilesel.h>
-#include <gtk/gtktreeselection.h>
-#include <gtk/gtkscrolledwindow.h>
+#include <gtk/gtk.h>
 
 #include "generaldialogs.h"
 

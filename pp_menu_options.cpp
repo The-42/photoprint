@@ -1,9 +1,6 @@
 #include <iostream>
 
-#include <gtk/gtkstock.h>
-#include <gtk/gtkradioaction.h>
-#include <gtk/gtkcheckmenuitem.h>
-#include <gtk/gtkmain.h>
+#include <gtk/gtk.h>
 
 #include "pp_mainwindow.h"
 #include "dialogs.h"

@@ -4,10 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtkfilesel.h>
-#include <gtk/gtkentry.h>
-#include <gtk/gtkbutton.h>
-#include <gtk/gtkhbox.h>
+#include <gtk/gtk.h>
 
 #include <gutenprint/gutenprint.h>
 

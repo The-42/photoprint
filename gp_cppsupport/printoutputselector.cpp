@@ -4,12 +4,7 @@
 
 #include <string.h>
 
-#include <gtk/gtkframe.h>
-#include <gtk/gtksizegroup.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtkcontainer.h>
-#include <gtk/gtkdialog.h>
-#include <gtk/gtkstock.h>
+#include <gtk/gtk.h>
 
 #include "stpui_widgets/stpui_queue.h"
 #include "stpui_widgets/stpui_printerselector.h"

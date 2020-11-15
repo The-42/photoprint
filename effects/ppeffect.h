@@ -1,8 +1,8 @@
 #ifndef PPEFFECT_H
 #define PPEFFECT_H
 
-#include <gtk/gtkwindow.h>
-#include <gdk/gdkpixbuf.h>
+#include <gtk/gtk.h>
+#include <gdk/gdk.h>
 
 #include "../imagesource/imagesource.h"
 #include "../support/thread.h"

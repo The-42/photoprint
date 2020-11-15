@@ -17,11 +17,7 @@
 
 #include <string.h>
 
-#include <gtk/gtkentry.h>
-#include <gtk/gtklist.h>
-#include <gtk/gtkfilesel.h>
-#include <gtk/gtkfilechooser.h>
-#include <gtk/gtkmenuitem.h>
+#include <gtk/gtk.h>
 
 #include "../miscwidgets/generaldialogs.h"
 #include "../support/debug.h"

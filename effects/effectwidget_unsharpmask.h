@@ -4,14 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtkcombo.h>
-#include <gtk/gtkcheckbutton.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkframe.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtktreeview.h>
-#include <gtk/gtktreestore.h>
-#include <gtk/gtkcellrendererpixbuf.h>
+#include <gtk/gtk.h>
 
 
 G_BEGIN_DECLS

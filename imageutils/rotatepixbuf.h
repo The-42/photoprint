@@ -1,7 +1,7 @@
 #ifndef ROTATEPIXBUF_H
 #define ROTATEPIXBUF_H
 
-#include <gdk/gdkpixbuf.h>
+#include <gdk/gdk.h>
 #ifndef GDK_PIXBUF_TRANSFORM_H
 
 #define gdk_pixbuf_rotate_simple pv_gdk_pixbuf_rotate_simple

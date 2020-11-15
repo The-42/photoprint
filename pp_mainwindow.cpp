@@ -1,17 +1,6 @@
 #include <string.h>
 
-#include <gtk/gtkframe.h>
-#include <gtk/gtksizegroup.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtkfilesel.h>
-#include <gtk/gtkfilechooser.h>
-#include <gtk/gtkfilechooserdialog.h>
-#include <gtk/gtkdialog.h>
-#include <gtk/gtkmenuitem.h>
-#include <gtk/gtkcheckmenuitem.h>
-#include <gtk/gtkimage.h>
-#include <gtk/gtkmain.h>
-#include <gtk/gtkuimanager.h>
+#include <gtk/gtk.h>
 
 #include "stpui_widgets/stpui_combo.h"
 #include "progressbar.h"

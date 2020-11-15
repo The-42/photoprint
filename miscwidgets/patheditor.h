@@ -4,14 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtkcombo.h>
-#include <gtk/gtkcheckbutton.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkframe.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtktreeview.h>
-#include <gtk/gtkliststore.h>
-#include <gtk/gtkcellrenderertext.h>
+#include <gtk/gtk.h>
 
 #include "searchpath.h"
 

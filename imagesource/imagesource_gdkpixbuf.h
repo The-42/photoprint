@@ -13,7 +13,7 @@
 #define IMAGESOURCE_GDKPIXBUF_H
 
 #include "imagesource.h"
-#include <gdk/gdkpixbuf.h>
+#include <gdk/gdk.h>
 #include <fstream>
 
 class ImageSource_GdkPixbuf : public ImageSource

@@ -15,9 +15,7 @@
 
 #include <string.h>
 
-#include <gtk/gtklabel.h>
-#include <gtk/gtktable.h>
-#include <gtk/gtkcheckbutton.h>
+#include <gtk/gtk.h>
 
 #include "stpui_optionpage.h"
 

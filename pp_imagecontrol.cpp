@@ -1,9 +1,6 @@
 #include <string.h>
 
-#include <gtk/gtkframe.h>
-#include <gtk/gtkexpander.h>
-#include <gtk/gtksizegroup.h>
-#include <gtk/gtklabel.h>
+#include <gtk/gtk.h>
 
 #include "layout.h"
 #include "photoprint_state.h"

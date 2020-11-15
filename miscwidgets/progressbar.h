@@ -4,7 +4,7 @@
 #include "progress.h"
 #include "thread.h"
 #include "refcountui.h"
-#include <gtk/gtkwidget.h>
+#include <gtk/gtk.h>
 
 class ProgressBar : public Progress
 {

@@ -11,10 +11,7 @@
 
 #include <string.h>
 
-#include <gtk/gtkframe.h>
-#include <gtk/gtksizegroup.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtkexpander.h>
+#include <gtk/gtk.h>
 
 #include "stpui_widgets/dimension.h"
 #include "stpui_widgets/stpui_combo.h"

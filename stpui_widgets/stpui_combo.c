@@ -16,8 +16,7 @@
 
 #include <string.h>
 
-#include <gtk/gtkentry.h>
-#include <gtk/gtklist.h>
+#include <gtk/gtk.h>
 
 #include "stpui_combo.h"
 

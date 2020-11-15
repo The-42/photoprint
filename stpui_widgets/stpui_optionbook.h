@@ -4,9 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtktable.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtknotebook.h>
+#include <gtk/gtk.h>
 
 #include <gutenprint/gutenprint.h>
 

@@ -4,9 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtkoptionmenu.h>
-#include <gtk/gtkhbox.h>
-#include <gtk/gtktooltips.h>
+#include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 

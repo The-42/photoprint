@@ -4,16 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtkcombobox.h>
-#include <gtk/gtkliststore.h>
-#include <gtk/gtkcombo.h>
-#include <gtk/gtkcheckbutton.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkframe.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtkoptionmenu.h>
-#include <gtk/gtkmenu.h>
-#include <gtk/gtktooltips.h>
+#include <gtk/gtk.h>
 
 #include "profilemanager.h"
 

@@ -20,8 +20,7 @@
 #include <gutenprint/vars.h>
 
 #include <gtk/gtk.h>
-#include <gtk/gtknotebook.h>
-#include <gdk/gdkkeysyms.h>
+#include <gdk/gdk.h>
 
 #include "gp_cppsupport/printoutputselector.h"
 #include "pp_cms.h"

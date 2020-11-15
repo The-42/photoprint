@@ -13,11 +13,7 @@
 #include <cstdlib>
 #include <cstring>
 
-#include <gtk/gtkentry.h>
-#include <gtk/gtklist.h>
-#include <gtk/gtkmenu.h>
-#include <gtk/gtkmenuitem.h>
-#include <gtk/gtktooltips.h>
+#include <gtk/gtk.h>
 
 #include "simplecombo.h"
 

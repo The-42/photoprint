@@ -9,16 +9,6 @@
 #include <string.h>
 
 #include <gtk/gtk.h>
-#include <gtk/gtkframe.h>
-#include <gtk/gtksizegroup.h>
-#include <gtk/gtkcheckbutton.h>
-#include <gtk/gtkfilesel.h>
-#include <gtk/gtkentry.h>
-#include <gtk/gtkspinbutton.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtktable.h>
-#include <gtk/gtkoptionmenu.h>
-#include <gtk/gtkmenuitem.h>
 
 #include "pp_units.h"
 #include "dialogs.h"

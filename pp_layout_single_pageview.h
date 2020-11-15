@@ -3,10 +3,7 @@
 
 
 #include <gdk/gdk.h>
-#include <gtk/gtkwidget.h>
-#include <gtk/gtkaccelgroup.h>
-#include <gtk/gtkcheckmenuitem.h>
-#include <gtk/gtkmenuitem.h>
+#include <gtk/gtk.h>
 
 #include "pixbufthumbnail/egg-pixbuf-thumbnail.h"
 

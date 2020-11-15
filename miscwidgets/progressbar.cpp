@@ -13,11 +13,6 @@
 #include <iostream>
 
 #include <gtk/gtk.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkwindow.h>
-#include <gtk/gtkprogressbar.h>
-#include <gtk/gtkstock.h>
 
 #include "errordialogqueue.h"
 #include "progressbar.h"

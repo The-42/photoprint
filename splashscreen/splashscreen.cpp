@@ -1,6 +1,5 @@
 #include <gtk/gtk.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
-#include <gdk-pixbuf/gdk-pixdata.h>
+#include <gdk/gdk.h>
 
 #include "splashscreen.h"
 #include "splashscreendata.cpp"

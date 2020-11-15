@@ -15,7 +15,7 @@
 #include <string>
 
 #include <gtk/gtk.h>
-#include <gdk/gdkkeysyms.h>
+#include <gdk/gdk.h>
 
 #include "miscwidgets/generaldialogs.h"
 #include "miscwidgets/pixbufview.h"

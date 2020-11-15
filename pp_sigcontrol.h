@@ -3,12 +3,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtktable.h>
-#include <gtk/gtkexpander.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkhbox.h>
-#include <gtk/gtkspinbutton.h>
-#include <gtk/gtksizegroup.h>
+#include <gtk/gtk.h>
 
 #include <gutenprint/gutenprint.h>
 

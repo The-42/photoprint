@@ -4,11 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtkwindow.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkhbox.h>
-#include <gtk/gtkspinbutton.h>
-#include <gtk/gtkuimanager.h>
+#include <gtk/gtk.h>
 
 #include <gutenprint/gutenprint.h>
 

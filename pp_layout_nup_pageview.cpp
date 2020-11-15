@@ -1,9 +1,7 @@
 
 #include <math.h>
 #include <stdio.h>
-#include <gtk/gtkmain.h>
-#include <gtk/gtksignal.h>
-#include <gtk/gtkdnd.h>
+#include <gtk/gtk.h>
 
 #include "stpui_widgets/stpui_combo.h"
 #include "pp_sigcontrol.h"

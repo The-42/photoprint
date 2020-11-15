@@ -4,8 +4,8 @@
 #include <list>
 #include <stdio.h>
 #include <glib.h>
-#include <gtk/gtkwidget.h>
-#include <gdk/gdkpixbuf.h>
+#include <gtk/gtk.h>
+#include <gdk/gdk.h>
 
 #include "profilemanager/profilemanager.h"
 #include "imagesource/imagesource.h"

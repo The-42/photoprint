@@ -11,7 +11,7 @@
 #ifndef PIXBUF_FROM_IMAGESOURCE_H
 #define PIXBUF_FROM_IMAGESOURCE_H
 
-#include <gdk/gdkpixbuf.h>
+#include <gdk/gdk.h>
 
 #include "imagesource.h"
 #include "progress.h"

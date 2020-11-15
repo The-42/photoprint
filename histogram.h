@@ -1,7 +1,7 @@
 #ifndef HISTOGRAM_H
 #define HISTOGRAM_H
 
-#include <gdk/gdkpixbuf.h>
+#include <gdk/gdk.h>
 
 #include "imagesource/imagesource_histogram.h"
 #include "support/rwmutex.h"

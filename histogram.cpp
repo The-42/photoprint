@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-#include <gdk/gdkpixbuf.h>
+#include <gdk/gdk.h>
 
 #include "support/debug.h"
 

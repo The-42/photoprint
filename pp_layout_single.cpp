@@ -1,12 +1,6 @@
 #include <string.h>
 
-#include <gtk/gtkframe.h>
-#include <gtk/gtksizegroup.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtkfilesel.h>
-#include <gtk/gtkdialog.h>
-#include <gtk/gtkscrolledwindow.h>
-#include <gtk/gtkexpander.h>
+#include <gtk/gtk.h>
 
 #include "stpui_widgets/stpui_combo.h"
 #include "layout.h"

@@ -1,7 +1,7 @@
 #ifndef REFCOUNTUI_H
 #define REFCOUNTUI_H
 
-#include <gtk/gtkmain.h>
+#include <gtk/gtk.h>
 
 #include "../support/refcount.h"
 #include "../support/thread.h"

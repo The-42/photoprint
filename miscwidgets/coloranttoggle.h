@@ -4,14 +4,7 @@
 #include <deque>
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtkcombo.h>
-#include <gtk/gtkcheckbutton.h>
-#include <gtk/gtkhbox.h>
-#include <gtk/gtkframe.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtktreeview.h>
-#include <gtk/gtktreestore.h>
-#include <gtk/gtkcellrendererpixbuf.h>
+#include <gtk/gtk.h>
 #include <cairo.h>
 
 #include "imagesource/devicencolorant.h"

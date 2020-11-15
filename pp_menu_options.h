@@ -1,7 +1,6 @@
 #ifndef PP_MENU_OPTIONS_H
 #define PP_MENU_OPTIONS_H
-#include <gtk/gtkwidget.h>
-#include <gtk/gtkuimanager.h>
+#include <gtk/gtk.h>
 
 #include "profilemanager/profilemanager.h"
 

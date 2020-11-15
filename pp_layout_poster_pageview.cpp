@@ -1,10 +1,7 @@
 
 #include <math.h>
 #include <stdio.h>
-#include <gtk/gtkmain.h>
-#include <gtk/gtksignal.h>
-#include <gtk/gtkdnd.h>
-#include <gtk/gtkmenu.h>
+#include <gtk/gtk.h>
 
 #include "support/layoutrectangle.h"
 #include "support/debug.h"

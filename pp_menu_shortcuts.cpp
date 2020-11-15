@@ -3,8 +3,8 @@
 #include <algorithm>
 #include <vector>
 
-#include <gtk/gtkstock.h>
-#include <gtk/gtkmain.h>
+#include <gtk/gtk.h>
+#include <gtk/gtk.h>
 
 #include "pp_menu_shortcuts.h"
 #include "pp_mainwindow.h"

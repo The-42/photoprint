@@ -1,7 +1,6 @@
 #ifndef PP_MENU_IMAGE_H
 #define PP_MENU_IMAGE_H
-#include <gtk/gtkwidget.h>
-#include <gtk/gtkuimanager.h>
+#include <gtk/gtk.h>
 #include "support/layoutrectangle.h"
 #include "pp_mainwindow.h"
 

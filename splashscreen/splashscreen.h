@@ -2,7 +2,7 @@
 #define SPLASHSCREEN_H
 
 #include <gtk/gtk.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk/gdk.h>
 
 class SplashScreen
 {

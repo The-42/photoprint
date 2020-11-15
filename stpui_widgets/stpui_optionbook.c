@@ -10,8 +10,7 @@
 
 #include <string.h>
 
-#include <gtk/gtklabel.h>
-#include <gtk/gtkscrolledwindow.h>
+#include <gtk/gtk.h>
 
 #include "stpui_optionbook.h"
 #include "../stp_support/stputil.h"

@@ -3,11 +3,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtktable.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkexpander.h>
-#include <gtk/gtkhbox.h>
-#include <gtk/gtklabel.h>
+#include <gtk/gtk.h>
 
 #include "layout.h"
 

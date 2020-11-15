@@ -4,11 +4,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gtk/gtktable.h>
-#include <gtk/gtkvbox.h>
-#include <gtk/gtkhbox.h>
-#include <gtk/gtkcombo.h>
-#include <gtk/gtkspinbutton.h>
+#include <gtk/gtk.h>
 
 #include "lcmswrapper.h"
 #include "stpui_widgets/units.h"

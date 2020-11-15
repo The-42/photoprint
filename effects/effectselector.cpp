@@ -13,13 +13,7 @@
 #include <stdlib.h>
 
 #include <gtk/gtk.h>
-#include <gtk/gtkentry.h>
-#include <gtk/gtklist.h>
-#include <gtk/gtkfilesel.h>
-#include <gtk/gtktreeselection.h>
-#include <gtk/gtkscrolledwindow.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
-#include <gdk-pixbuf/gdk-pixdata.h>
+#include <gdk/gdk.h>
 
 #include "../support/debug.h"
 

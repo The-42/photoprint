@@ -1,7 +1,6 @@
 #include <iostream>
 
-#include <gtk/gtkstock.h>
-#include <gtk/gtkmain.h>
+#include <gtk/gtk.h>
 
 #include "pp_menu_file.h"
 #include "pp_mainwindow.h"
