@@ -272,7 +272,7 @@ void coloranttoggle_refresh(ColorantToggle *c)
 {
 	if(c)
 	{
-		for(int i=0;i<c->buttons.size();++i)
+		for(unsigned int i=0;i<c->buttons.size();++i)
 		{
 			c->buttons[i]->refresh();
 		}
@@ -361,7 +361,7 @@ void coloranttoggle_set_colorants(ColorantToggle *c,DeviceNColorantList *list)
 
 void coloranttoggle_set_value(ColorantToggle *c,ISDeviceNValue &value)
 {
-	for(int i=0;i<c->buttons.size();++i)
+	for(unsigned int i=0;i<c->buttons.size();++i)
 	{
 		c->buttons[i]->redraw(value[i]);
 	}
