@@ -19,7 +19,7 @@
 #endif
 #endif
 
-#include <lcms.h>
+#include <lcms2.h>
 #include "md5.h"
 #include "imagesource_types.h"
 
@@ -55,11 +55,9 @@ class CMSProfile
 	enum IS_TYPE GetDeviceLinkOutputSpace();
 	bool IsDeviceLink();
 	bool IsV4();
-	const char *GetName();
 	const char *GetManufacturer();
 	const char *GetModel();
 	const char *GetDescription();
-	const char *GetInfo();
 	const char *GetCopyright();
 	const char *GetFilename();
 	MD5Digest *GetMD5();
@@ -111,7 +109,7 @@ class CMSWhitePoint
 	public:
 	CMSWhitePoint(int degk)
 	{
-		cmsWhitePointFromTemp(degk,&whitepoint);
+		cmsWhitePointFromTemp(&whitepoint, degk);
 	}
 	protected:
 	cmsCIExyY whitepoint;
@@ -147,18 +145,18 @@ class CMSGamma
 	public:
 	CMSGamma(float gamma)
 	{
-		gammatable=cmsBuildGamma(256,gamma);
+		gammatable=cmsBuildGamma(NULL, gamma);
 	}
 	~CMSGamma()
 	{
-		cmsFreeGamma(gammatable);
+		cmsFreeToneCurve(gammatable);
 	}
-	LPGAMMATABLE GetGammaTable()
+	cmsToneCurve* GetGammaTable()
 	{
 		return(gammatable);
 	}
 	protected:
-	LPGAMMATABLE gammatable;
+	cmsToneCurve *gammatable;
 	friend class CMSProfile;
 	friend class CMSRGBGamma;
 };
@@ -182,7 +180,7 @@ class CMSRGBGamma
 	}
 	protected:
 	CMSGamma redgamma,greengamma,bluegamma;
-	LPGAMMATABLE gammatables[3];
+	cmsToneCurve *gammatables[3];
 	friend class CMSProfile;
 };
 

@@ -46,7 +46,6 @@ CMSProfile::CMSProfile(const char *fn) : md5(NULL), generated(false), filename(N
 	if(!fn)
 		throw "NULL profile filename provided";
 
-	cmsErrorAction(LCMS_ERROR_SHOW);
 
 	filename=strdup(fn);
 
@@ -62,17 +61,17 @@ void CMSProfile::CalcMD5()
 	if(generated)
 	{
 		Debug[TRACE] << "Saving profile to RAM for MD5 calculation." << endl;
-		size_t plen=0;
-		_cmsSaveProfileToMem(prof,NULL,&plen);
+		unsigned int plen=0;
+		cmsSaveProfileToMem(prof,NULL,&plen);
 		if(plen>0)
 		{
 			Debug[TRACE] << "Plen = " << plen << endl;
 			buflen=plen;
 			buffer=(char *)malloc(buflen);
-			if(_cmsSaveProfileToMem(prof,buffer,&plen))
+			if(cmsSaveProfileToMem(prof,buffer,&plen))
 			{
 				Debug[TRACE] << "Saved successfully" << endl;
-				md5=new MD5Digest(buffer+sizeof(icHeader),buflen-sizeof(icHeader));
+				md5=new MD5Digest(buffer+sizeof(cmsICCHeader),buflen-sizeof(cmsICCHeader));
 			}
 		}
 	}
@@ -86,12 +85,12 @@ void CMSProfile::CalcMD5()
 		char *data=(char *)malloc(filelen);
 		f.read((char *)data,filelen);
 		f.close();
-		md5=new MD5Digest(data+sizeof(icHeader),filelen-sizeof(icHeader));
+		md5=new MD5Digest(data+sizeof(cmsICCHeader),filelen-sizeof(cmsICCHeader));
 		free(data);
 	}
 	else
 	{
-		md5=new MD5Digest(buffer+sizeof(icHeader),buflen-sizeof(icHeader));
+		md5=new MD5Digest(buffer+sizeof(cmsICCHeader),buflen-sizeof(cmsICCHeader));
 	}
 }
 
@@ -117,7 +116,7 @@ CMSProfile::CMSProfile(CMSGamma &gamma,CMSWhitePoint &whitepoint)
 CMSProfile::CMSProfile(CMSWhitePoint &whitepoint)
 	: md5(NULL), generated(true), filename(NULL), buffer(NULL), buflen(0)
 {
-	if(!(prof=cmsCreateLabProfile(&whitepoint.whitepoint)))
+	if(!(prof=cmsCreateLab2Profile(&whitepoint.whitepoint)))
 		throw "Can't create virtual LAB profile";
 	CalcMD5();
 }
@@ -193,32 +192,32 @@ bool CMSProfile::operator==(const CMSProfile &other)
 
 bool CMSProfile::IsDeviceLink()
 {
-	return(cmsGetDeviceClass(prof) == icSigLinkClass);
+	return(cmsGetDeviceClass(prof) == cmsSigLinkClass);
 }
 
 
 bool CMSProfile::IsV4()
 {
-	Debug[TRACE] << "Profile version: " << cmsGetProfileICCversion(prof) << endl;
-	return(cmsGetProfileICCversion(prof) >= 0x04000000L);
+	Debug[TRACE] << "Profile version: " << cmsGetProfileVersion(prof) << endl;
+	return(cmsGetProfileVersion(prof) >= 0x04000000L);
 }
 
 
 enum IS_TYPE CMSProfile::GetColourSpace()
 {
-	icColorSpaceSignature sig=cmsGetColorSpace(prof);
+	cmsColorSpaceSignature sig=cmsGetColorSpace(prof);
 	switch(sig)
 	{
-		case icSigGrayData:
+		case cmsSigGrayData:
 			return(IS_TYPE_GREY);
 			break;
-		case icSigRgbData:
+		case cmsSigRgbData:
 			return(IS_TYPE_RGB);
 			break;
-		case icSigCmykData:
+		case cmsSigCmykData:
 			return(IS_TYPE_CMYK);
 			break;
-		case icSigLabData:
+		case cmsSigLabData:
 			return(IS_TYPE_LAB);
 			break;
 		default:
@@ -232,19 +231,19 @@ enum IS_TYPE CMSProfile::GetDeviceLinkOutputSpace()
 {
 	if(!IsDeviceLink())
 		throw "GetDeviceLinkOutputSpace() can only be used on DeviceLink profiles!";
-	icColorSpaceSignature sig=cmsGetPCS(prof);
+	cmsColorSpaceSignature sig=cmsGetPCS(prof);
 	switch(sig)
 	{
-		case icSigGrayData:
+		case cmsSigGrayData:
 			return(IS_TYPE_GREY);
 			break;
-		case icSigRgbData:
+		case cmsSigRgbData:
 			return(IS_TYPE_RGB);
 			break;
-		case icSigCmykData:
+		case cmsSigCmykData:
 			return(IS_TYPE_CMYK);
 			break;
-		case icSigLabData:
+		case cmsSigLabData:
 			return(IS_TYPE_LAB);
 			break;
 		default:
@@ -254,63 +253,55 @@ enum IS_TYPE CMSProfile::GetDeviceLinkOutputSpace()
 }
 
 
-const char *CMSProfile::GetName()
-{
-	const char *txt=cmsTakeProductName(prof);
-	if(txt)
-		return(txt);
-	else
-		return("unknown");
-}
-
-
 const char *CMSProfile::GetManufacturer()
 {
-	const char *txt=cmsTakeManufacturer(prof);
-	if(txt)
-		return(txt);
-	else
-		return("unknown");
+	char txt[256];
+	unsigned int len = cmsGetProfileInfoASCII(
+		NULL, cmsInfoManufacturer, "en", "US", txt, sizeof(txt));
+
+	if (!len)
+		return strdup("unknown");
+
+	return strdup(txt);
 }
 
 
 const char *CMSProfile::GetModel()
 {
-	const char *txt=cmsTakeModel(prof);
-	if(txt)
-		return(txt);
-	else
-		return("unknown");
+	char txt[256];
+	unsigned int len = cmsGetProfileInfoASCII(
+		prof, cmsInfoModel, "en", "US", txt, sizeof(txt));
+
+	if (!len)
+		return strdup("unknown");
+
+	return strdup(txt);
 }
 
 
 const char *CMSProfile::GetDescription()
 {
-	const char *txt=cmsTakeProductDesc(prof);
-	if(txt)
-		return(txt);
-	else
-		return("unknown");
-}
+	char txt[256];
+	unsigned int len = cmsGetProfileInfoASCII(
+		prof, cmsInfoDescription, "en", "US", txt, sizeof(txt));
 
+	if (!len)
+		return strdup("unknown");
 
-const char *CMSProfile::GetInfo()
-{
-	const char *txt=cmsTakeProductInfo(prof);
-	if(txt)
-		return(txt);
-	else
-		return("unknown");
+	return strdup(txt);
 }
 
 
 const char *CMSProfile::GetCopyright()
 {
-	const char *txt=cmsTakeCopyright(prof);
-	if(txt)
-		return(txt);
-	else
-		return("unknown");
+	char txt[256];
+	unsigned int len = cmsGetProfileInfoASCII(
+		prof, cmsInfoCopyright, "en", "US", txt, sizeof(txt));
+
+	if (!len)
+		return strdup("unknown");
+
+	return strdup(txt);
 }
 
 
