@@ -6,6 +6,8 @@
 #include <X11/Xatom.h>
 #endif
 
+#include <string.h>
+
 #include "../support/debug.h"
 
 #include "profilemanager.h"
