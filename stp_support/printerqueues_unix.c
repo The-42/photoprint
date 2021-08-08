@@ -517,12 +517,12 @@ static int initialisejob(struct pqinfo *pq)
 	pq->priv->childpid=fork();
 	if(pq->priv->childpid==-1)
 	{
-//		fprintf(stderr,"PrinterQueue: Failed to create child process\n");
+		fprintf(stderr,"PrinterQueue: Failed to create child process\n");
 		return(0);
 	}
 	if(pq->priv->childpid==0)
 	{
-//		printf("Child process: %d\n",pq->priv->childpid);
+		printf("Child process: %d\n",pq->priv->childpid);
 		dup2(pq->priv->pipefd[0],0);
 		close(pq->priv->pipefd[0]);
 		close(pq->priv->pipefd[1]);
