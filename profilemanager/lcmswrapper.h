@@ -74,6 +74,8 @@ class CMSProfile
 	friend class CMSTransform;
 	friend class CMSProofingTransform;
 	friend std::ostream& operator<<(std::ostream &s,CMSProfile &sp);
+	private:
+	static void CMSLogError(cmsContext ContextID, unsigned int code, const char *txt);
 };
 
 

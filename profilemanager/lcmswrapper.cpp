@@ -46,6 +46,7 @@ CMSProfile::CMSProfile(const char *fn) : md5(NULL), generated(false), filename(N
 	if(!fn)
 		throw "NULL profile filename provided";
 
+	cmsSetLogErrorHandler(CMSLogError);
 
 	filename=strdup(fn);
 
@@ -53,6 +54,12 @@ CMSProfile::CMSProfile(const char *fn) : md5(NULL), generated(false), filename(N
 		throw "Can't open profile";
 
 	CalcMD5();
+}
+
+
+void CMSProfile::CMSLogError(cmsContext ContextID, unsigned int code, const char *txt)
+{
+	fprintf(stderr, "lcms2 error %u: %s\n", code, txt);
 }
 
 
